@@ -6,8 +6,17 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 11:22:36 by atabarea          #+#    #+#             */
-/*   Updated: 2026/06/19 11:26:46 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/06/19 14:22:33 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
+
+Array<int>::Array(void)
+{
+}
+
+Array<int>::Array(unsigned int n)
+{
+	
+}
