@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/06/18 15:02:48 by atabarea          #+#    #+#              #
-#    Updated: 2026/06/19 10:46:22 by atabarea         ###   ########.fr        #
+#    Created: 2026/06/19 10:31:28 by atabarea          #+#    #+#              #
+#    Updated: 2026/06/19 11:25:49 by atabarea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= templates
+NAME		= iter
 CXX			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 

@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/18 15:02:44 by atabarea          #+#    #+#             */
-/*   Updated: 2026/06/19 10:32:36 by atabarea         ###   ########.fr       */
+/*   Created: 2026/06/19 10:31:30 by atabarea          #+#    #+#             */
+/*   Updated: 2026/06/19 11:16:14 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "iter.hpp"
+#include <string>
 
-template <typename T>
-void swap(T& a, T& b)
+int main(void)
 {
-	T c = a;
-	a = b;
-	b = c;
+	int int_array[] = {1, 3, 43, 2, 7};
+	iter(int_array, 5, ::func<int>);
+	std::string str_array[] = {"Hello", "my name", "is", "Manolor"};
+	iter(str_array, 4, ::func<std::string>);
+	const std::string const_array[] = {"Hello", "my name", "is", "const Manolor"};
+	iter(const_array, 4, ::func<std::string>);
+	return (0);
 }
-
-template <typename T>
-T min(T a, T b)
-{
-	if (a < b)
-		return (a);
-	return (b);
-}
-
-template <typename T>
-T max(T a, T b)
-{
-	if (a > b)
-		return (a);
-	return (b);
-}
-

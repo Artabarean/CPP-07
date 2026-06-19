@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/18 15:02:44 by atabarea          #+#    #+#             */
-/*   Updated: 2026/06/19 10:32:36 by atabarea         ###   ########.fr       */
+/*   Created: 2026/06/19 10:31:26 by atabarea          #+#    #+#             */
+/*   Updated: 2026/06/19 11:17:29 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include <iostream>
 
-template <typename T>
-void swap(T& a, T& b)
+template <typename T, typename U, typename F>
+void iter(T *address, const U length, F func)
 {
-	T c = a;
-	a = b;
-	b = c;
+	for(int i = 0; i < length; ++i)
+	{
+		func(address[i]);
+	}
 }
 
 template <typename T>
-T min(T a, T b)
+void func(const T& a)
 {
-	if (a < b)
-		return (a);
-	return (b);
+	std::cout << a << std::endl;
 }
-
-template <typename T>
-T max(T a, T b)
-{
-	if (a > b)
-		return (a);
-	return (b);
-}
-

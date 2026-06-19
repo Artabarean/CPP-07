@@ -5,17 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/06/18 15:02:48 by atabarea          #+#    #+#              #
-#    Updated: 2026/06/19 10:46:22 by atabarea         ###   ########.fr        #
+#    Created: 2026/06/19 11:22:41 by atabarea          #+#    #+#              #
+#    Updated: 2026/06/19 11:26:11 by atabarea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= templates
+NAME		= Array
 CXX			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 SRC		= \
-	main.cpp 
+	main.cpp \
+	Arrat.tpp
 
 OBJS	= $(SRC:.cpp=.o)
 

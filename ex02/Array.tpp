@@ -1,38 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   Array.tpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/18 15:02:44 by atabarea          #+#    #+#             */
-/*   Updated: 2026/06/19 10:32:36 by atabarea         ###   ########.fr       */
+/*   Created: 2026/06/19 11:22:36 by atabarea          #+#    #+#             */
+/*   Updated: 2026/06/19 11:26:46 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
-template <typename T>
-void swap(T& a, T& b)
-{
-	T c = a;
-	a = b;
-	b = c;
-}
-
-template <typename T>
-T min(T a, T b)
-{
-	if (a < b)
-		return (a);
-	return (b);
-}
-
-template <typename T>
-T max(T a, T b)
-{
-	if (a > b)
-		return (a);
-	return (b);
-}
-
+#include "Array.hpp"
