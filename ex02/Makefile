@@ -6,27 +6,26 @@
 #    By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/19 11:22:41 by atabarea          #+#    #+#              #
-#    Updated: 2026/06/19 11:26:11 by atabarea         ###   ########.fr        #
+#    Updated: 2026/06/22 09:58:35 by atabarea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Array
+NAME		= Arrays
 CXX			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRC		= \
-	main.cpp \
-	Arrat.tpp
+SRC		= main.cpp
 
 OBJS	= $(SRC:.cpp=.o)
 
+INCLUDE = -I.
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CXX) $(CPPFLAGS) $(OBJS) -o $(NAME)  
 
 %.o: %.cpp
-	$(CXX) $(CPPFLAGS) -c $< -o $@
+	$(CXX) $(CPPFLAGS) $(INCLUDE) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
