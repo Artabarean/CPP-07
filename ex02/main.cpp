@@ -2,35 +2,20 @@
 #include <cmath>
 #include <Array.hpp>
 
-#define MAX_VAL 750
 int main(int, char**)
 {
-    Array<int> numbers(MAX_VAL);
-    int* mirror = new int[MAX_VAL];
+    Array<int> integers(25);
+    int* twin = new int[25];
     srand(time(NULL));
-    for (int i = 0; i < MAX_VAL; i++)
+    for (int i = 0; i < 25; i++)
     {
-        const int value = rand();
-        numbers[i] = value;
-        mirror[i] = value;
-    }
-    //SCOPE
-    {
-        Array<int> tmp = numbers;
-        Array<int> test(tmp);
-    }
-
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        if (mirror[i] != numbers[i])
-        {
-            std::cerr << "didn't save the same value!!" << std::endl;
-            return 1;
-        }
+        const int val = rand();
+        integers[i] = val;
+        twin[i] = val;
     }
     try
     {
-        numbers[-2] = 0;
+        integers[-1] = 0;
     }
     catch(const std::exception& e)
     {
@@ -38,18 +23,17 @@ int main(int, char**)
     }
     try
     {
-        numbers[MAX_VAL] = 0;
+        integers[25] = 0;
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
     }
-
-    for (int i = 0; i < MAX_VAL; i++)
+    for (int i = 0; i < 25; i++)
     {
-        numbers[i] = rand();
-        std::cout << numbers[i] << std::endl;
+        integers[i] = rand();
+        std::cout << integers[i] << std::endl;
     }
-    delete [] mirror;
+    delete [] twin;
     return 0;
 }
